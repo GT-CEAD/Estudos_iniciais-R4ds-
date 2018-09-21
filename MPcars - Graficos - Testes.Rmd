@@ -1,0 +1,125 @@
+---
+title: "Dashboard no R"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+data(mtcars)
+mtcars<-within(mtcars,{am<-factor(am,labels=c("automatico","manual"))})
+
+mtcars<-within(mtcars,{vs<-factor(vs,labels=c("não","sim"))})
+```
+
+Basicos
+=======================================================================
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### Gráfico de barras do tipo de marcha
+
+```{r}
+barplot(table(mtcars$am),col="red",ylim=c(0,30))
+
+
+```
+
+
+
+### Chart B
+
+```{r}
+barplot(table(mtcars$am),col="blue",ylim=c(0,40))
+
+```
+
+### Chart C
+
+```{r}
+pie(table(mtcars$am),col=c("yellow","green"))
+```
+
+Outros Gráficos
+=======================================================================
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### Chart d
+
+```{r}
+
+plot(mtcars$mpg,mtcars$hp,col="blue",pch=19,xlab="milhas por galão",ylab="cavalos de potência",main="Diagrama de Dispersão")
+abline(lsfit(mtcars$mpg,mtcars$hp),col="blue",lty=2,lwd=4)
+
+
+```
+
+
+### Chart F
+
+```{r}
+hist(mtcars$hp, col="darkred")
+
+```
+
+### Chart G
+
+```{r}
+MC<-cor(mtcars[,c("disp","drat","hp","mpg","qsec","wt")])
+library(corrplot)
+#corrplot(MC,method="circle")
+corrplot.mixed(MC)
+
+```
+
+
+### Chart H
+
+```{r}
+resultado<-c(11000,240000,19000,-500,-9000,1000,-2000)
+ano<-c("2010","2011","2012","2013","2014","2015","2016")
+dadosgrafico1<-data.frame(ano,resultado,stringsAsFactors = TRUE)
+
+library(ggplot2)
+
+grafico<-ggplot(data=dadosgrafico1,aes(x=ano,y=resultado))+geom_bar(stat="identity",fill=c("#10c6d3","#0ea5af","#0b8b93","#096c72","#064144","#10c6d3","#0ea5af"))+
+  ylab("Resultado Primario")+
+  xlab("Ano")+
+  
+  theme_minimal()
+library(plotly)
+ggplotly(grafico)
+
+```
+
+
+### Chart I
+
+```{r}
+library(dygraphs)
+dygraph(nhtemp,main="New Haven Temperatures") %>%
+  dyRangeSelector()
+
+```
+
+
+### Chart J
+
+```{r}
+
+ library(dygraphs)
+library(data.table)
+
+z <- rbind(
+  data.table(t=as.POSIXlt("2015-07-01 09:30:00") + 0:359, y = cumsum(rnorm(360))),
+  data.table(t=as.POSIXlt("2015-07-01 11:30:00") + 0:359, y = cumsum(rnorm(360))))
+setkey(z, t)
+z[, t := as.Date("2015-07-01") + seq_along(y)]
+dygraph(z)
+```
+

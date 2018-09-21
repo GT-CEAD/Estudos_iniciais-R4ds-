@@ -1,0 +1,69 @@
+---
+title: "Painel de Controle"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+data(mtcars)
+mtcars<-within(mtcars,{am<-factor(am,labels=c("automatico","manual"))})
+
+mtcars<-within(mtcars,{vs<-factor(vs,labels=c("não","sim"))})
+```
+
+Basicos
+=======================================================================
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### Nossa Histório e o Porquê da Existência
+
+>'Porque projetar o futuro faz a diferença'
+
+![](https://i1.wp.com/38.media.tumblr.com/0d83e04a37e47982b00ebfe1a9b74a74/tumblr_mm0or2n1yC1r4zr2vo1_r1_500.gif?w=1170) 
+
+
+
+
+### Gráfico de barras do tipo de marcha
+
+
+```{r}
+library(dygraphs)
+dygraph(nhtemp,main="New Haven Temperatures") %>%
+  dyRangeSelector()
+
+```
+
+
+
+Outros Gráficos
+=======================================================================
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+
+### Chart J
+
+```{r}
+
+ library(dygraphs)
+library(data.table)
+
+z <- rbind(
+  data.table(t=as.POSIXlt("2015-07-01 09:30:00") + 0:359, y = cumsum(rnorm(360))),
+  data.table(t=as.POSIXlt("2015-07-01 11:30:00") + 0:359, y = cumsum(rnorm(360))))
+setkey(z, t)
+z[, t := as.Date("2015-07-01") + seq_along(y)]
+dygraph(z)
+```
+
+
+

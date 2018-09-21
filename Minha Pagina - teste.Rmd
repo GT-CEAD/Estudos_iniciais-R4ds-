@@ -1,0 +1,223 @@
+---
+title: "Minha Página HTML"
+author: "Lucas Gurgel Leite"
+date: "Janeiro de 2018"
+output: 
+  html_document:
+      theme: flatly
+      toc: true
+      toc_float: true
+      code_folding: hide
+      
+---
+
+
+<head>
+ <!-- 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <style>
+  h1 {
+     text-align: center;
+     background-color: blue;
+     color: white;
+  }
+    body {
+    background-color: #cde7f4;
+    color:#53b9d6;
+    text-align:justify;
+    }
+  </style>
+</head>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#**JUSTIÇA**
+
+> 'Democracia é a pior forma de governo, com exceção de todas as demais' . Churchill
+
+![](http://4.bp.blogspot.com/-kZi7H9ytIp4/U3DyXUsD-7I/AAAAAAAAGN0/61ri5DVRqEI/s1600/Futebol+Brasil+5.gif) 
+
+
+<br>Presidente do **Supremo Tribunal Federal (STF)**, Cármen Lúcia, suspendeu a posse da deputada federal Cristiane Brasil (PTB-RJ) como ministra do Trabalho.
+
+# cerimonia
+
+A cerimônia de posse estava marcada pelo governo Temer para as 9h desta segunda (22), mas foi cancelada.
+
+<i class="fa fa-money"></i>
+<i class="fa fa-money" style="font-size:24px"></i>
+<i class="fa fa-money" style="font-size:36px"></i>
+<i class="fa fa-money" style="font-size:48px;color:red"></i>
+<br>
+
+Cármen analisou uma reclamação movida por um grupo de advogados, que contestou no STF a decisão do Superior Tribunal de Justiça (STJ) que, no sábado (20), havia liberado a posse de Cristiane Brasil.
+
+<!--comentarios-->
+
+```{r cars}
+
+# base de dados
+data("mtcars")
+
+# media
+mean(mtcars$mpg)
+#
+par(bg="#8bd2dd")
+plot(mtcars$mpg,mtcars$hp,col="blue",pch=19,xlab="milhas por galão",ylab="cavalos de potência",main="Diagrama de Dispersão")
+abline(lsfit(mtcars$mpg,mtcars$hp),col="blue",lty=2,lwd=4)
+
+cor(mtcars$mpg,mtcars$hp)
+
+```
+<ab>
+
+# Matriz de Correlação
+```{r correlação, message=FALSE}
+
+MC<-cor(mtcars[,c("disp","drat","hp","mpg","qsec","wt")])
+library(corrplot)
+#corrplot(MC,method="circle")
+corrplot.mixed(MC)
+
+```
+
+ 
+**Figura - o STF**
+
+<!-- <![](C:/Users/Lucas Leite/Desktop/stf.jpg)> -->
+
+O grupo, o mesmo que conseguiu nas primeiras instâncias barrar a deputada de assumir a pasta, alega que a nomeação da filha de Roberto Jefferson contraria o princípio da moralidade, determinado pela Constituição, por causa de condenações que Cristiane Brasil sofreu na Justiça Trabalhista.
+
+**Figura - Político**
+<!--
+![](data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHMAzQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcCAQj/xABEEAACAQMBBQQHBAcFCQEAAAABAgMABBEFBhIhMUETUWFxBxQiMoGRoSNCscEVFlJicoLRJDVDkvA0RFNUg4Sy4fEz/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAECAwQF/8QAJREAAwACAQMEAgMAAAAAAAAAAAECAxEhBBIxFCIyQRNRQlJh/9oADAMBAAIRAxEAPwDMI+XLNEezGstpTSKc7rcR51Dj0xsZJGKkWdjE88aM3NwKs0YfWrfCCpNoWU9rMCN7iM04Nq4Y0zv8e6uL7TklgyR7KrwNZVrVzJHfyJG3sg4qk3/Rp1ztkSN2IjJ61D/WKCH7a5ny/PGayxrqY/fNNM7N7zE+ZpiC3azahdVQQx5Cg86FjcStzc/Omqesrc3VykIYKWOMmmBJ0uzm1K+jtoskseLdwra9F0mHTrCOCNRwUZPfVHsRsxHpatcSMJJH6kchRmSCMitGNLWyLZFEIU5AxUa51GytTuy3EYf9gHJ+VVm0OveryNaWjJvjg7t08B40KNdwRsXeVIieLF2G8x+dVZM3bxJZGPfLDCXXlXLRwncHVjj6U1b7T2byCOZuzY8uufKgm41azDFUuwzHkVBambSa4luEYpC6Jn2M49moTlsm4n6DfVtaQOqQneBHSqm/2gdE3EXBA51Ai7NU7K9BYk5R97nTEsaBtzOR0NS/I2Zr6ea5Z5JtFccBvGpFvrbIA0jnB51AlsEnXHI1XpbX9neRt6uZkU5A6Gn3EcfT4540FQu1uPtYW4ZwR3VY22SBjjUCCI3EbTmBYXYDejFPWlx2Z3T8qNk/xxL0kXdvCrggjjiqDWbRY52YDFXtjcAkZNQNdAZCwpEiNo0Qlmjz0o3S0UIMKBwoM2cINwg8a0MKNxfKlQyAbYYpp7dc+7Viy0ww40hGHLq08pxk/Opem3E3r9uxJxvjrVLbqd/lVtZj7eL+IVKXsqWDHPhGianf9np+OpSsf1Zi17Ix6tWg69dBLdcnpWc3kna3EjdM1AvGDXle0qYjynbZ9ydGBxg86bNeUAaBpu1c9rAo7UMqgcCeNWI2+SWxuFhAW63CELcgeVZfmp1k8As7hGQ+sNjs26ADnTltLWx+WTJL27uJjDbl5JGPFjxyfKr/AETYa6v2E2ou4zxxnjVzsBsz2ltDfGLtGkUOD3CtGjt0tlO/gY51mu34Rtx4lrbA+P0cac0PDeVu8UFbSbPals7cAuC9q3uTr909xrXV1Z2m7O2tUCf8SaTGfIAV3qdlDq9i8Fyu7kcsjge+qldS+Sy8c0tIwqO6nVoxMcxvy8COlT7ecPIhJwSONQtcs5dI1eW2I908FI4EZ5imtMuBFfwXEkW/AJcsnPA61qVbWzDUtbQQqrBgRxBqxtSy4BFP/p/ZcDAt8DyrobS7MryiI8cVd2lJOieN4uQBHWoB7F7koGUTcwD94UzLtLpU9wltp0Jbf++TjdqtvUeS4Dg8OhHSgYSQyBcAc+tc6txtc+NRLFpXsxKwy0Tbsh8OhqbqQ3rHPiKQFds3If0ii561pye4vkKyzZ5lj1RGY4ANaO2pW8cSlnUcO+kFNSuSU9MNzqou9o7dOCsCfOoh1WeX2kBxU5xVRT6jH4TM20qyLKSRmunUwTjpg5q9sLcRpyqu1aDdlJ76jJeVu0l60sKhT50NVfakjernhwqhNJrQHlKlXtIDyvK6NeGgDynYWw9NV3GcOPOgDU9m7mRtmrRop5V7JXVgJRGoCk8SaJtltQOv9tbiQs8K5bLA/Uc6C9hdK/TGj3cbEEQ3HBW5YKjPCtH0Gy0rZqGQqEid4/tHAxkDJ/rWan5S8nQxbaTBfWVvrLUXAsVuFCbyCRmCN4cOv9Kv9nU1C4jWWa3WBT/hrIXC/MVdWmp2F+qmF47iFuToc7tSbiYQL9jgjyrPT3Pgu09mcelLQN54NTi95FMbgd3HjVFszslFe2L6hfrdLEo+zSEgEgnixz0FafqUI1OylglA3XQjj0rmK2t4dyeJ1SGGAxuoPQADOPhTWSlOkR/FLe6Mpu7jZi1vbizuNOnWWF2jLFuDEHGefWhS5eJp5DApWMsd1SeQp/X7ptQ1e+vCMdrMzKMcl6fTFQkroKm0c2ku56HrKTsbmNxwCmi23kdSN9SVbiDQeo9oVoujpFd6RG2BvbuD8KkiLPbeZILuKQt9hNmGYdOPI/OrDUkMdmUbmpwaGNTaSBni+6eI86v3uxfaLDc54lQr46MP9fShiKKAOJvYzvZ4Yq7t9H1O73TI7Bemar9GA/SUYYffrUrdEECbo6CknoqzYJy62wTttlguDK2TVzBpscMYTdHCrZuApoin3MjHT448Iz5U3TwqDrEO9FvDoKtZF3WIpi7Tft2HhTNALGNLi2dDzHfQnOnZysh6Gisho52A76oNYh3Lgv0aigIFe15SqACpUq6Rd44AJPcKAOK6HOrGDTIzGHmlIyM7qDNOpb2kR9lXY/vN/SnoAp9GWperahLaNwE6h1B715/Q/StIv4bSZUuLuXsmU+9vd/SsTtbtLO8gu4F3ZYJA64PPw+PL41qB9S2gs4bkzzvaMA25DLuHe6huvDu4VnyRqtm7p8ia0XcG0Oz1p/ZhPHFI3LfXdDnwJqes6TpvQHK9MmqPS4YlONPsY4UH38ZPzNT5GaElnbHlVF6NZPFwqg5xQztFb6rfbL3ECTiMgYOFA3488icZ41YxObmYDjufjUvaAiPTUjXgJJUVvLOfyqM/JFd+DO9Y9H18+net2k0Mkkce8YgCC4Azw8fOgWW2ns5OyvIJbeTGdyVCjY78HpW7wXBi3hlRhOB8+AFTJ7ax1q2NvqljHPGB98e74g8810EjmM+eN8ZFHGxlxvW8kZPutwonvPQ/aapOG0C8e0GQXjuPtFUd4PP6mu29GOsbNk3Ftcw6jb49vslKOnjunOR5H4U/DIsqNXsVnTeAGRTNlbG3Wexz7FynaQ+Ei8x8RV/6rI0XtxsPOotwpiMMhtTIY5AQDwA6fhR3T+w7a14KHSP7yi/irVbfjAn8IrM3gdNTkmgjkMfaE8F5daOtL1GNoVVyVIAHEUuExtPSLNhTZrvfRhlWyPCuSRRsWgJvEw1RyuUIPdVjqCcSagqMkAVMAT1Feyu89DUPUbFrq23oomZgOGBV1qhvLe/9hLdYse/cMFUH4/lSO0Jswva3tuT+zDAfoTiqqul4RbMS+WwQg0DVZ/8A87GbzIwKsLfYvWJfeiWMeLCrqXbmUri3WNf3m4n8vwqMNqmc/wBpUXA/ZllO7/lHD6VS6ylqx4yOuxpQkXF9GGHNIgXb5DJqw0/Sm0a4CxaM152jAeszDioPAgKM44Z58eNdxbZGNdyO2gVR0U4Hyrv9cj/y6Dyaqay514ktnHi2nsEb9XtL24hIYIsrBM9Rngad0nS9T1y49W0mynu5cZ3YlyB5nkKPtnrqfavUo7C10qO5I9pnlUFIV/aJPL862XSNFs9EgK26J27LiSQKBkdwHQeFasOS7WnOjPmmFTaZgOmbGLZXCzbR3cEQgk+0s4m7Riw+45HAdxxmiZ7uGzO5psUEUKMoEEahVXePXx503t20cG1VxNHhRKw7QdN4Y9r48M1TJcdqwM8jMVcyboGAcDhmrWitcBhaamLqAPAfZ3iMdxBwRTrNLKQHbK0FbK6ow1K5s2Psv9ondvdR8R+FF6zZGVPKs1zybsd9yLK2Ts+I60xtDcBxaQNyLkt8BTaXWADnlVXqc4mu4w7EKqnj3VVE+9Esj9rJiSSSxOkQYvGpyVU7o8zy7qvLOXtJYreEfaSMF4ciTwzWeXW1NybqLT7cqkMsm6FHcOOT8vrWlbDxpLq8kkzZeCLKL4ngT8PzrcuTnMOLKzjtoFtos4HGR+rmpu6ijljxzUeJ8Ad54mnQ+9zqLIAnrtjp0MVxcQPNG4O9ggBMk8hkfhQnqThtNud04PZMR4VpGvWltfabOl2oEaoW3uqYHMVi+sazeWjyWkdk06NHwkiIxx86y5ccqk1wa8Vty0O7AX8l9orzXGO0MxDGibeXPurnyrNtnZ9T0qza2g0+dw77+WcKBmi7sNRli9qEDeAJ3ZeVRqZdb7iadKV7S+EpA4V4ZT41RRwX8K4ETnzkzXaxarjgka+Blo7ZX8h7r+pImhtboERXsYc8uG99MioB2eaUYuNYz+5EvZD6Nn60BW93d7IXBF/EWmnTKFWRwFz+8D17qmLt/GfftVPnaxn8CK6O5MHIRalsUbh0ayvbSHHvbyk73xzVe3o+veO7dafJnuBH5VXnbqwb39PiP/aD8pKdi200c+/Yxr5Ruv4OaNyHI+fR/qOOCWEmP3z/AEpttgdUGf7FaMPCT/1TOp7Z6e2nzLp9uFuWXdRhJKN3PXiccKpbbanaFFCi7mYAYBMQOfjij2hyXT7CamB/dMZHesqj8ae0v0fXl7fRwXFkllEfenmmXdX4Akk+FU/6669GOM4/mj/+V2u3+uIeMsZ/lI/OjUhyfQWzWk6HsvpqWGkvAuQO1l3hvzv3nj9OQqbJce2wBHInjXzXJthq1/fWsk84WOOVW3V4Zwep7q3RNSE0KzA57SMOPiM0SlsfJme2xM2r37rjCsAxxnFDk900dpvDk4AJB5n/AFmrXV5w+paiXXfcyeyPn0qhjUy2B3iSVJApPySJek2bTC3MchSaaUbjAcc5oyWVklKS+zKhwyjl51R6JGUl0pwudyRCOP71FO2Giy6frbXMIPq157Stn3XA4j8/nVeZe3Zf09e7tIbzlQcH51B2otri0sYXlIVrs4QDiQoGSc99dnJHtjjVjtarXGxmjToSssT9mr93Bh+QqnEk2zR1O5kzzTrcjWtOllyVfLAHpyxitc2Fuwu0c6ZGOxb8qzWZTBBoU5I3txd98ciQKuU1Z9G1e01RVJiP2coHUdfpWlGA3S3lDrvDkeVTIsnpVFolylxDG0ZVkZd5GB4Ed9R9tNsLXZS0t3nDZuWKpJjIGBTqeSAUSwiSJ0kUMjAhlPIg1807fWF3omuyW8UcrxglAVznhyJ81K/WtDT0sWT/AO/sPFkXH4VW6vtDs1r0wm1C7VpsAF1fcJxnHI+NJ4u7ySm3PKMnXUb1Ocd0Pi1Oprt+n+Ler/Oa0aDTNlryQR2t3Mznkq3BNSH2R0hvdvLlf+oD+VQfTSW+ov8AZnEW1F8h/wBqvB/NT364X33b65o6k2N04+7qzr/EqH8qjtsTZE8NXjPnGlR9JI/U2ZPczyz4M0sshUYBkctj51Hp1x7NcxhN77TO74VMoOKVennXsYDOoY7oJ4nuoA9jbdYNgEjvolsNs9UsYljhjtN0DgGib+tDDAA8DmuwBgcKADCbbq9vLGSCe1tw7DBZRwI8jmhPHPAxXK+8K7609gkeoCQR31sukaqsuzVjNI2JFhAbHU44/WsdhOJBnlWnbB6RFtBo89tNdNAlq+ciPePHjnn4jpR3dvJOZ2yk1Jo7zU2WwDNNcYXskByzZ6fOnJtEutIZ7W8ADld8Y7sca0fQ9kNO0e1mk0+ZZL+VSrXc49og9FA90eVTH0yLVrL1HVkT1mNSqSxuCR4g8z4g1S83P+GmcG4f7M70hUSbTx2nENGW8BkVqG3kiJspLkAuZoxHnp7Wc/IGgSbZ+fTr+0sr9B2LuI47iM8HY9fDy8KKZIp9U0d9Hu33biNgYnbkWXkD9aup92N6KJXbkTYHFi8e82M1dzw+tejK4k+9azlx8GDfgTVRDbTyXKWMcR9YZ9zdPQ9c+WKMb63trHR/0NasJlkUmdhydiME1l6dU22bespdqRmWqxMdnYHjG6YTnkOWcVESZbjT5IXPDrjwq7ihV9Meymkw6F43U46HBz8aD4ZvVZHjkO6EGGPTNakc9moehfV5riG80qd99bPdMRPMoxbgfIg/Srj042AvNhWuFyXsrmOX2Rngcof/AC+lCPolsdVTat7qOyu/UprZo2nERCZypHE8DyNbBtNpP6T2W1OwI4zWrqqjvxw+tSp8ET5Ktkea4jgVgpkYKCeQosbYS5x9lqlm/wDKRQc3FN7vFN4BHEUlQaC0299sZcJeO8UrSgxo0MhBXv5jrT49Id8Ofb/51P4rQb2jDd9tsDlk8q8cZ9onOaO4A4T0i3IHtoxHjHGfyFOr6ReHtWiN52yf1rPq8o7mLRIPKmTzpUqiSPKVKlQIVOJypUqAOjyHnXTe+aVKkM6X3hWo+iCV01C/CsQDboxx1NKlUb+LJ4/kjRr20g9RNwI92U8SyErk/ChzZmV59UaeUgygkbwAGfPHP40qVYn8TrY/DDaSKOaNUlRXUnOGGeI5VU6mB6/K2OJxk/CvKVW9O2YuoS0NSQRfpCO43B2z253n6n2sfhUzS7SCZw0kYJXGOJpUq1x9ma/kh7SNA0u41W6ea0DEyZPttgkgdM4ohTZ7RUuUul0myE8agLIIFyPpSpUyssJCR1phia9pUvsPs+PdTiSHUb2OJQqJPIqqOQAYgCoC9fOlSoGzw9a6TiKVKgQ0a8pUqAP/2Q==)
+-->
+
+
+<br>A presidente do STF afirmou que sua decisão é "precária e urgente" e pode ser revista, mas aceitou "parcialmente a providência liminar para a suspensão do ato de posse". Na despacho da decisão, Cármen Lúcia diz ter tomado a decisão "com base no poder geral de cautela e nos princípios constitucionais da segurança jurídica e da efetividade da jurisdição, que seriam comprometidos com o ato de posse". A ministra deu 48 horas para as partes se manifestarem e pediu a manifestação da Procuradoria-Geral da República sobre o assunto.
+
+**Figura - o SOL**
+
+<!--![](C:/Users/Lucas Leite/Desktop/sol.jpg)-->
+
+
+
+<br>**Cármen Lúcia** suspende posse de Cristiane Brasil para o Ministério do Trabalho
+
+#MAPA 
+
+```{r mapa,message=FALSE,warning=FALSE}
+#library(ggmap)
+#qmap(location = "rio de janeiro",maptype="satellite",zoom=14)
+
+
+
+```
+
+```{r grafico1, results='asis',message=FALSE}
+resultado<-c(11000,240000,19000,-500,-9000,1000,-2000)
+ano<-c("2010","2011","2012","2013","2014","2015","2016")
+dadosgrafico1<-data.frame(ano,resultado,stringsAsFactors = TRUE)
+
+library(ggplot2)
+
+grafico<-ggplot(data=dadosgrafico1,aes(x=ano,y=resultado))+geom_bar(stat="identity",fill=c("#10c6d3","#0ea5af","#0b8b93","#096c72","#064144","#10c6d3","#0ea5af"))+
+  ylab("Resultado Primario")+
+  xlab("Ano")+
+  
+  theme_minimal()
+library(plotly)
+ggplotly(grafico)
+#grafico
+
+#library(readxl)
+#teste <- read_excel("C:/Users/Lucas Leite/Desktop/teste.xlsx")
+#     sheet="Tabela1"
+#library(DT)
+#datatable(TableSTN4)
+
+```
+```{r ola}
+mtcars <-within(mtcars, {am <-factor(am,labels=c('Manual','Automatico'))})
+
+library(plotly)
+p<-plot_ly(data=mtcars,x=~hp,y=~mpg, color=~am)
+
+p
+
+```
+
+
+
+
+
+```{r rede}
+library(visNetwork)
+nodes<-data.frame(id=1:15)
+edges<-data.frame(from=sample(1:15,10),to=sample(1:15,10))
+visNetwork(nodes,edges,width="100%")
+
+
+```
+
+
+
+Filha do ex-deputado Roberto Jefferson, presidente do PTB e condenado no processo do mensalão, Cristiane Brasil foi anunciada como ministra pelo presidente Michel Temer no dia 3, mas tem enfrentado uma batalha na Justiça para assumir a pasta.
+
+```{r regressao}
+
+data("mtcars")
+modelo1 <-lm(mpg~hp,data=mtcars)
+modelo1
+
+```
+A Estimativa do $\beta_1$ desse modelo linear simples é `r coef(modelo1)[2]`
+
+```{r results ='hide', echo=FALSE}
+
+f<-function(x)format(x, digits=7, decimal.mark=",",big.mark.=".")
+
+media <- f(mean(mtcars$mpg))
+DP<-f(sd(mtcars$mpg))
+VAR<-f(var(mtcars$mpg))
+
+```
+A média $\bar{x}$ do MPG dessa base de dados é `r media`. E o $\sigma$ é `r DP`. Por fim, a $\sigma^2$ é `r VAR`.
+
+```{r vida}
+library(plotly)
+p<-plot_ly(
+  x=c("Rio de Janeiro","São Paulo","Brasilia"),
+  y=c(20,14,23),
+  name="cidades",
+  type="bar"
+)
+p
+```
+
+
+
+
+
+Cinco dias após o anúncio, a Justiça Federal suspendeu a posse da deputada, após o grupo de advogados trabalhistas apresentarem a ação questionando a nomeação.
+
+Após sofrer três derrotas no Tribunal Regional Federal da 2ª Região (TRF-2), na segunda instância, o governo tinha conseguido reverter a decisão de suspender a posse no STJ. Mas a decisão do STF adiou novamente a nomeação.
+
+**O que você achou dessa notícia?**
+
+1. Excelente
+
+2. Bom
+
+3. Não Gostei
+
+* **Jornais**
+    + Globo
+    + Estado de São Paulo
+    + UOL
+    
+    
+  **Equação - Regressão Linear MQO**
+    $$ Y_i = \beta_0 + \beta_1x_1 + \epsilon $$
